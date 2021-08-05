@@ -20,6 +20,5 @@ app.use("/api/feedback", require("./routes/api/feedback"));
 app.use("/api/orderstatus", require("./routes/api/orderStatus"));
 app.use("/api/leave", require("./routes/api/leave"));
 
-app.get("/", (req, res) => res.send("API running"));
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
