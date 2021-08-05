@@ -17,7 +17,40 @@ const Dashboard = ({
     getCurrentProfile();
   }, []);
   if (profile === null) {
-    return <div>Reload</div>;
+    return (
+      <Fragment>
+        <Spinner
+          style={{ marginTop: "20rem", marginLeft: "6rem" }}
+          animation="border"
+          variant="primary"
+        />
+        <Spinner
+          style={{ marginTop: "20rem", marginLeft: "6rem" }}
+          animation="border"
+          variant="secondary"
+        />
+        <Spinner
+          style={{ marginTop: "20rem", marginLeft: "6rem" }}
+          animation="border"
+          variant="success"
+        />
+        <Spinner
+          style={{ marginTop: "20rem", marginLeft: "6rem" }}
+          animation="border"
+          variant="danger"
+        />
+        <Spinner
+          style={{ marginTop: "20rem", marginLeft: "6rem" }}
+          animation="border"
+          variant="warning"
+        />
+        <Spinner
+          style={{ marginTop: "20rem", marginLeft: "6rem" }}
+          animation="border"
+          variant="info"
+        />
+      </Fragment>
+    );
   }
   const role = user ? user.role : "admin";
   if (loading) {
