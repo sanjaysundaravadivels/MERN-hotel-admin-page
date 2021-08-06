@@ -19,7 +19,7 @@ const Dashdelivery = ({
     getCurrentProfile();
   }, [getCurrentProfile]);
 
-  const id = profile._id;
+  const id = profile !== null ? profile._id : 0;
   return (
     <main className="dashboard">
       <Card

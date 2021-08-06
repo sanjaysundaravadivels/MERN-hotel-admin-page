@@ -36,7 +36,7 @@ const ApplyLeave = ({
   const deleting = (id) => {
     deleteleaveRequest(id);
   };
-  if (leaveRequests === null) {
+  if (leaveRequests === null || users === null) {
     return (
       <Fragment>
         <Spinner
